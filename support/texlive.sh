@@ -11,6 +11,8 @@ if ! command -v tlmgr > /dev/null; then
     $INSTALL/install-tl -profile ./support/texlive.profile;
 fi
 
+tlmgr update --self --all −−no−auto−install;
+
 tlmgr install latexmk \
     etoolbox \
     fandol \
@@ -18,6 +20,3 @@ tlmgr install latexmk \
     cjk ctex environ ms trimspaces ulem xecjk zhnumber \
     booktabs caption listings thumbpdf zapfding \
     cite;
-
-
-tlmgr update --self --all −−no−auto−install;
